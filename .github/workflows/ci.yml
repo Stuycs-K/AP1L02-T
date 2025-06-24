@@ -8,6 +8,7 @@ on:
 jobs:
   run-tests:
     runs-on: [self-hosted, stuycs-k, linux]  # Use your runner's label
+    if: github.repository != 'stuycs-k/ap1l02-t'
 
     steps:
       - name: Checkout code
