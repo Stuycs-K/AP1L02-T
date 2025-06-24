@@ -12,7 +12,6 @@ You must write three methods, and write many tests for each. Do not forget to te
 
 Negative numbers should work for parseInt() but you should worry about that last after you get non negative numbers working.
 
-
 ## Commits
 For this lab be sure to commit regularly (any time you make meaninful progress or improve your methods) This means multiple (more than 2) commits in class, and multiple (more than 2) commits at home each day until you are done.
 
