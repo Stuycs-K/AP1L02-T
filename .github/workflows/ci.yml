@@ -13,8 +13,11 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Make runner.sh executable
-        run: chmod +x runner.sh
-        
-      - name: Run a the test script
-        run: ./runner.sh
+      - name: Run only if owner is stuycs-k
+        if: github.repository_owner != 'stuycs-k'
+        run: |
+          echo "Running default tester..."
+          chmod +x runner.sh
+          ./runner.sh
+
+      
