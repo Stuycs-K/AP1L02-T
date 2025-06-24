@@ -1,0 +1,20 @@
+name: CI on Self-Hosted Runner
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  run-tests:
+    runs-on: [self-hosted, stuycs-k, linux]  # Use your runner's label
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Make runner.sh executable
+        run: chmod +x runner.sh
+        
+      - name: Run a the test script
+        run: ./runner.sh

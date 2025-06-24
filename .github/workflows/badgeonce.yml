@@ -1,0 +1,23 @@
+name: Add Badge to readme (Once)
+
+on:
+  workflow_dispatch:   # manual trigger only
+
+jobs:
+  run-update:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Run addbadgeonce.sh
+        run: |
+          chmod +x ./addbadgeonce.sh
+          ./addbadgeonce.sh
+          
+      - name: Commit and push changes (if any)
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add .
+          git diff --cached --quiet || (git commit -m "Run update.sh on repo creation" && git push)
