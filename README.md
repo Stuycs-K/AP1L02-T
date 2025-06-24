@@ -1,4 +1,4 @@
-# APCS1-LAB02
+# APCS1-Lab02
 
 You must write three methods, and write many tests for each. Do not forget to test empty strings where appropriate.
 
