@@ -29,3 +29,4 @@ Make sure you commit with meaningful messages.
    
 6. Now you will write test cases for, and create one more method: int parseInt(String). Place it in the StringMethods.java file.
 
+![CI](https://github.com/stuycs-k/AP1L02-T/actions/workflows/ci.yml/badge.svg)
