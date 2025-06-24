@@ -13,11 +13,10 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Run only if owner is not stuycs-k
-        if: github.repository_owner != 'stuycs-k'
+      - name: Run only if repo name does NOT start with AP1L
+        if: "!startsWith(github.repository, 'AP1L')"
         run: |
           echo "Running default tester..."
           chmod +x runner.sh
           ./runner.sh
-
       
